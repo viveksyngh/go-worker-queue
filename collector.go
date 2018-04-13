@@ -5,6 +5,9 @@ import (
 	"time"
 )
 
+//WorkQueue channel to store incoming work request
+var WorkQueue = make(chan WorkRequest, 100)
+
 //Collector handler for taking up the work request over HTTP
 func Collector(w http.ResponseWriter, r *http.Request) {
 

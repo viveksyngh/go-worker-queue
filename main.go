@@ -6,9 +6,6 @@ import (
 	"net/http"
 )
 
-//WorkQueue channel to store incoming work request
-var WorkQueue = make(chan WorkRequest, 100)
-
 var (
 	//NWorkers is number of workers to start
 	NWorkers = flag.Int("n", 4, "The number of workers to start")
